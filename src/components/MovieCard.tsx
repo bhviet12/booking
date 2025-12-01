@@ -9,14 +9,19 @@ export default function MovieCard({ title, image, description, onClick }: MovieC
   return (
     <div
       onClick={onClick}
-      className="bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+      className="aspect-[2/3] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden relative group"
     >
-      <div className="aspect-[2/3] bg-gray-200 rounded-lg overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-full object-cover"
+      />
+
+      {/* Title overlay */}
+      <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4">
+        <h3 className="text-white text-xl md:text-2xl font-bold text-center drop-shadow-lg">
+          {title}
+        </h3>
       </div>
     </div>
   )
