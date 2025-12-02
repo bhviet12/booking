@@ -43,8 +43,8 @@ export default function MovieDetail({ movie, onClose }: MovieDetailProps) {
             {/* Left side - Description */}
             <div className="order-1 md:order-2 flex flex-col justify-between">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                  {movie.title}
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 uppercase">
+                  {movie.title} ({movie.releaseYear})
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 whitespace-pre-line">
                   {movie.description}
