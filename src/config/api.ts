@@ -6,7 +6,7 @@ export const sendToGoogleSheets = async (data: any, sheetUrl: string) => {
   }
 
   try {
-    const response = await fetch(sheetUrl, {
+    await fetch(sheetUrl, {
       method: 'POST',
       mode: 'no-cors', // Required for Google Apps Script
       headers: {

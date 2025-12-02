@@ -5,7 +5,7 @@ interface MovieCardProps {
   onClick: () => void
 }
 
-export default function MovieCard({ title, image, description, onClick }: MovieCardProps) {
+export default function MovieCard({ title, image, onClick }: MovieCardProps) {
   return (
     <div
       onClick={onClick}
