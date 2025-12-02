@@ -18,8 +18,8 @@ export default function MovieCard({ title, image, onClick }: MovieCardProps) {
       />
 
       {/* Title overlay */}
-      <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-4">
-        <h3 className="text-white text-xl md:text-2xl font-bold text-center drop-shadow-lg">
+      <div className="absolute inset-0 bg-black/60 flex items-center justify-center p-2 md:p-4">
+        <h3 className="text-white text-xs md:text-xl lg:text-2xl font-bold text-center drop-shadow-lg leading-tight">
           {title}
         </h3>
       </div>

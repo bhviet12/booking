@@ -16,7 +16,7 @@ function App() {
       <MusicControl autoPlay={true} />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 py-12 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12 text-center">
         <ChristmasHero />
         <ScheduleInfo />
       </div>

@@ -102,11 +102,11 @@ export default function MovieList() {
   return (
     <>
       <div>
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-8 drop-shadow-2xl">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 md:mb-8 drop-shadow-2xl">
           MOVIE
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {movies.map((movie) => (
             movie.image ? (
               <MovieCard
@@ -121,7 +121,7 @@ export default function MovieList() {
                 key={movie.id}
                 className="aspect-[2/3] bg-gray-200 rounded-xl shadow-xl overflow-hidden flex items-center justify-center"
               >
-                <span className="text-gray-400 text-2xl font-bold">Coming Soon</span>
+                <span className="text-gray-400 text-sm md:text-2xl font-bold">Coming Soon</span>
               </div>
             )
           ))}
