@@ -7,7 +7,7 @@ import dieHard from '../assets/die hard.jpg'
 import loveActually from '../assets/Poster_phim_Yêu_thực_sự_2003.jpg'
 
 export interface TicketType {
-  type: 'A' | 'B'
+  type: 'Sofa' | 'Ghế thường'
   price: number
   maxSeats: number
   availableSeats: number
@@ -37,8 +37,8 @@ const movies: Movie[] = [
     image: dieHard,
     description: 'Thông tin buổi chiếu\n\nMột sĩ quan cảnh sát New York cố gắng cứu vợ cũ và nhiều người khác bị bắt làm con tin bởi khủng bố trong một bữa tiệc Giáng sinh.\n\nThời gian: 7h30 tối ngày 08.12.2025\nĐồ ăn: Burger của Aerie\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
-      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
-      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+      { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
+      { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
     ],
     showDate: '08.12.2025',
     releaseYear: 1988,
@@ -55,8 +55,8 @@ const movies: Movie[] = [
     image: nightmareBeforeChristmas,
     description: 'Thông tin buổi chiếu\n\nJack Skellington, vua của Halloween Town, khám phá ra Christmas Town, nhưng nỗ lực mang Giáng sinh về nhà gây ra nhiều nhầm lẫn.\n\nThời gian: 7h30 tối ngày 15.12.2025\nĐồ ăn: Khoai nghiền và thịt hầm\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
-      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
-      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+      { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
+      { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
     ],
     showDate: '15.12.2025',
     releaseYear: 1993,
@@ -73,8 +73,8 @@ const movies: Movie[] = [
     image: loveActually,
     description: 'Thông tin buổi chiếu\n\nCâu chuyện tình yêu đan xen của nhiều cặp đôi trong mùa Giáng sinh tại London.\n\nThời gian: 7h30 tối ngày 22.12.2025\nĐồ ăn: Mỳ ý bò bằm sốt kem\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
-      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
-      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+      { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
+      { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
     ],
     showDate: '22.12.2025',
     releaseYear: 2003,
@@ -91,8 +91,8 @@ const movies: Movie[] = [
     image: lastHoliday,
     description: 'Thông tin buổi chiếu\n\nMột người phụ nữ nghĩ mình sắp chết nên bỏ việc, tiêu hết tiền để tận hưởng cuộc sống xa hoa ở châu Âu.\n\nThời gian: 7h30 tối ngày 29.12.2025\nĐồ ăn: Cơm cà ri gà cay\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
-      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
-      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+      { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
+      { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
     ],
     showDate: '29.12.2025',
     releaseYear: 2006,
@@ -111,7 +111,7 @@ export default function MovieList() {
   return (
     <>
       <div>
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 md:mb-8 drop-shadow-2xl">
+        <h2 className="font-hammersmith text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 md:mb-8 drop-shadow-2xl">
           MOVIE
         </h2>
 

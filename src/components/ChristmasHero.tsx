@@ -4,7 +4,7 @@ export default function ChristmasHero() {
   return (
     <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12 text-center">
       {/* Title */}
-      <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 drop-shadow-2xl tracking-wide md:tracking-wider leading-tight">
+      <h1 className="font-hammersmith text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 drop-shadow-2xl tracking-wide md:tracking-wider leading-tight">
         CHRISTMAS MOVIE MARATHON
       </h1>
 

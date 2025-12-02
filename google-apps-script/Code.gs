@@ -57,6 +57,7 @@ function doPost(e) {
         'Name',
         'Facebook/Instagram',
         'Phone',
+        'Drinks',
         'Ticket Type',
         'Quantity',
         'Total Price (VND)',
@@ -64,7 +65,7 @@ function doPost(e) {
       ]);
 
       // Format header row
-      const headerRange = sheet.getRange(1, 1, 1, 10);
+      const headerRange = sheet.getRange(1, 1, 1, 11);
       headerRange.setBackground('#4CAF50');
       headerRange.setFontColor('#FFFFFF');
       headerRange.setFontWeight('bold');
@@ -79,6 +80,7 @@ function doPost(e) {
       data.name,
       data.socialMedia,
       data.phone,
+      data.drinks || '',
       data.ticketType,
       data.quantity,
       data.totalPrice,
@@ -87,15 +89,15 @@ function doPost(e) {
 
     // Format dòng vừa thêm
     const lastRow = sheet.getLastRow();
-    const dataRange = sheet.getRange(lastRow, 1, 1, 10);
+    const dataRange = sheet.getRange(lastRow, 1, 1, 11);
     dataRange.setBorder(true, true, true, true, false, false);
 
     // Format số tiền
-    const priceCell = sheet.getRange(lastRow, 9);
+    const priceCell = sheet.getRange(lastRow, 10);
     priceCell.setNumberFormat('#,##0');
 
     // Tự động điều chỉnh độ rộng cột
-    sheet.autoResizeColumns(1, 10);
+    sheet.autoResizeColumns(1, 11);
 
     // Trả về response thành công
     return ContentService.createTextOutput(JSON.stringify({
@@ -153,6 +155,7 @@ function testBooking() {
         name: 'Nguyen Van A',
         socialMedia: '@nguyenvana',
         phone: '0912345678',
+        drinks: 'Coca Cola, Pepsi',
         ticketType: 'A',
         quantity: 2,
         totalPrice: 300000,

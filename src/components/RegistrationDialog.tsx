@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { Movie } from './MovieList'
 import { sendToGoogleSheets } from '../config/api'
+import menuPlaceholder from '../assets/logo không hình@4x.png'
 
 interface RegistrationDialogProps {
   movie: Movie
@@ -12,9 +13,11 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
     name: '',
     socialMedia: '',
     phone: '',
-    ticketType: 'A' as 'A' | 'B',
-    quantity: 1
+    ticketType: 'Sofa' as 'Sofa' | 'Ghế thường',
+    quantity: 1,
+    drinks: ''
   })
+  const [showMenu, setShowMenu] = useState(false)
 
   const selectedTicketType = movie.ticketTypes.find(t => t.type === formData.ticketType)
   const totalPrice = selectedTicketType ? selectedTicketType.price * formData.quantity : 0
@@ -36,6 +39,7 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
       phone: formData.phone,
       ticketType: formData.ticketType,
       quantity: formData.quantity,
+      drinks: formData.drinks,
       totalPrice: totalPrice,
       timestamp: new Date().toISOString()
     }
@@ -139,6 +143,31 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
               />
             </div>
 
+            {/* Drinks Selection */}
+            <div>
+              <label htmlFor="drinks" className="block text-sm font-semibold text-gray-700 mb-2">
+                Đồ uống
+              </label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  id="drinks"
+                  name="drinks"
+                  value={formData.drinks}
+                  onChange={handleChange}
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                  placeholder="Nhập đồ uống bạn muốn"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowMenu(true)}
+                  className="px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap"
+                >
+                  Xem Menu
+                </button>
+              </div>
+            </div>
+
             {/* Ticket Type Selection */}
             <div>
               <label htmlFor="ticketType" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -216,6 +245,52 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
           </form>
         </div>
       </div>
+
+      {/* Menu Dialog */}
+      {showMenu && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[70] flex items-center justify-center p-4"
+          onClick={() => setShowMenu(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowMenu(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl font-bold z-10"
+            >
+              ×
+            </button>
+
+            {/* Menu Header */}
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+              Menu Đồ Uống
+            </h3>
+
+            {/* Menu Image - Temporary placeholder */}
+            <div className="flex items-center justify-center bg-gray-50 rounded-lg p-4">
+              <img
+                src={menuPlaceholder}
+                alt="Menu đồ uống"
+                className="max-w-full max-h-[60vh] h-auto rounded-lg object-contain"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500 mt-2">
+              (Thay ảnh menu thật vào src/assets/)
+            </p>
+
+            {/* Close button at bottom */}
+            <button
+              onClick={() => setShowMenu(false)}
+              className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      )}
     </>
   )
 }

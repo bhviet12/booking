@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"EB Garamond"', 'serif'],
+        hammersmith: ['"Hammersmith One"', 'sans-serif'],
+        prompt: ['Prompt', 'sans-serif'],
       },
     },
   },
