@@ -21,6 +21,7 @@ export interface Movie {
   description: string
   ticketTypes: TicketType[]
   showDate: string
+  releaseYear: number
   bankInfo: {
     bankName: string
     accountNumber: string
@@ -40,6 +41,7 @@ const movies: Movie[] = [
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
     ],
     showDate: '08.12.2025',
+    releaseYear: 1988,
     bankInfo: {
       bankName: 'Vietcombank',
       accountNumber: '1234567890',
@@ -57,6 +59,7 @@ const movies: Movie[] = [
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
     ],
     showDate: '15.12.2025',
+    releaseYear: 1993,
     bankInfo: {
       bankName: 'Vietcombank',
       accountNumber: '1234567890',
@@ -74,6 +77,7 @@ const movies: Movie[] = [
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
     ],
     showDate: '22.12.2025',
+    releaseYear: 2003,
     bankInfo: {
       bankName: 'Vietcombank',
       accountNumber: '1234567890',
@@ -91,6 +95,7 @@ const movies: Movie[] = [
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
     ],
     showDate: '29.12.2025',
+    releaseYear: 2006,
     bankInfo: {
       bankName: 'Vietcombank',
       accountNumber: '1234567890',
@@ -117,7 +122,7 @@ export default function MovieList() {
                 key={movie.id}
                 title={movie.title}
                 image={movie.image}
-                showDate={movie.showDate}
+                releaseYear={movie.releaseYear}
                 description={movie.description}
                 onClick={() => setSelectedMovie(movie)}
               />
