@@ -155,8 +155,8 @@ function testBooking() {
         name: 'Nguyen Van A',
         socialMedia: '@nguyenvana',
         phone: '0912345678',
-        drinks: 'Coca Cola, Pepsi',
-        ticketType: 'A',
+        drinks: 'Trà đào, Soda chanh',
+        ticketType: 'Sofa',
         quantity: 2,
         totalPrice: 300000,
         timestamp: new Date().toISOString()

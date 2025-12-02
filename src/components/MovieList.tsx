@@ -35,7 +35,7 @@ const movies: Movie[] = [
     id: 1,
     title: 'Die Hard',
     image: dieHard,
-    description: 'Thông tin buổi chiếu\n\nMột sĩ quan cảnh sát New York cố gắng cứu vợ cũ và nhiều người khác bị bắt làm con tin bởi khủng bố trong một bữa tiệc Giáng sinh.\n\nThời gian: 7h30 tối ngày 08.12.2025\nĐồ ăn: Burger của Aerie\nĐồ uống: Đặt trước theo menu có sẵn',
+    description: 'Thông tin buổi chiếu\n\nMột sĩ quan cảnh sát New York cố gắng cứu vợ cũ và nhiều người khác bị bắt làm con tin bởi khủng bố trong một bữa tiệc Giáng sinh.\n\nThời gian: 7h30 tối ngày 08.12.2025\nĐồ ăn: Burger của Aerie\nKhoai nhảy múa\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
       { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
@@ -53,7 +53,7 @@ const movies: Movie[] = [
     id: 2,
     title: 'The Nightmare Before Christmas',
     image: nightmareBeforeChristmas,
-    description: 'Thông tin buổi chiếu\n\nJack Skellington, vua của Halloween Town, khám phá ra Christmas Town, nhưng nỗ lực mang Giáng sinh về nhà gây ra nhiều nhầm lẫn.\n\nThời gian: 7h30 tối ngày 15.12.2025\nĐồ ăn: Khoai nghiền và thịt hầm\nĐồ uống: Đặt trước theo menu có sẵn',
+    description: 'Thông tin buổi chiếu\n\nJack Skellington, vua của Halloween Town, khám phá ra Christmas Town, nhưng nỗ lực mang Giáng sinh về nhà gây ra nhiều nhầm lẫn.\n\nThời gian: 7h30 tối ngày 15.12.2025\nĐồ ăn: Khoai nghiền và thịt hầm\nKhoai nhảy múa\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
       { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
@@ -71,7 +71,7 @@ const movies: Movie[] = [
     id: 3,
     title: 'Love Actually',
     image: loveActually,
-    description: 'Thông tin buổi chiếu\n\nCâu chuyện tình yêu đan xen của nhiều cặp đôi trong mùa Giáng sinh tại London.\n\nThời gian: 7h30 tối ngày 22.12.2025\nĐồ ăn: Mỳ ý bò bằm sốt kem\nĐồ uống: Đặt trước theo menu có sẵn',
+    description: 'Thông tin buổi chiếu\n\nCâu chuyện tình yêu đan xen của nhiều cặp đôi trong mùa Giáng sinh tại London.\n\nThời gian: 7h30 tối ngày 22.12.2025\nĐồ ăn: Mỳ ý bò bằm sốt kem\nTrứng cút vui nhộn\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
       { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
@@ -89,7 +89,7 @@ const movies: Movie[] = [
     id: 4,
     title: 'Last Holiday',
     image: lastHoliday,
-    description: 'Thông tin buổi chiếu\n\nMột người phụ nữ nghĩ mình sắp chết nên bỏ việc, tiêu hết tiền để tận hưởng cuộc sống xa hoa ở châu Âu.\n\nThời gian: 7h30 tối ngày 29.12.2025\nĐồ ăn: Cơm cà ri gà cay\nĐồ uống: Đặt trước theo menu có sẵn',
+    description: 'Thông tin buổi chiếu\n\nMột người phụ nữ nghĩ mình sắp chết nên bỏ việc, tiêu hết tiền để tận hưởng cuộc sống xa hoa ở châu Âu.\n\nThời gian: 7h30 tối ngày 29.12.2025\nĐồ ăn: Cơm cà ri gà cay\nTrứng cút vui nhộn\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'Sofa', price: 200000, maxSeats: 3, availableSeats: 3, description: 'Ngồi được 2-3 người' },
       { type: 'Ghế thường', price: 150000, maxSeats: 10, availableSeats: 10, description: 'Ngồi 1 người' }
