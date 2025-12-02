@@ -10,7 +10,7 @@ interface RegistrationDialogProps {
 export default function RegistrationDialog({ movie, onClose }: RegistrationDialogProps) {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    socialMedia: '',
     phone: '',
     ticketType: 'A' as 'A' | 'B',
     quantity: 1
@@ -32,7 +32,7 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
       movie: movie.title,
       showDate: movie.showDate,
       name: formData.name,
-      email: formData.email,
+      socialMedia: formData.socialMedia,
       phone: formData.phone,
       ticketType: formData.ticketType,
       quantity: formData.quantity,
@@ -108,18 +108,18 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                Email
+              <label htmlFor="socialMedia" className="block text-sm font-semibold text-gray-700 mb-2">
+                Facebook/Instagram
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
+                type="text"
+                id="socialMedia"
+                name="socialMedia"
                 required
-                value={formData.email}
+                value={formData.socialMedia}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                placeholder="example@email.com"
+                placeholder="@username hoặc link profile"
               />
             </div>
 

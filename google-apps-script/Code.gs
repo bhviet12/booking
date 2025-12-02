@@ -27,9 +27,10 @@
 
 // Cấu hình tên các sheet theo từng phim
 const SHEET_NAMES = {
+  'Die Hard': 'DieHard',
   'The Nightmare Before Christmas': 'Nightmare',
-  'LAST HOLIDAY (2006)': 'LastHoliday',
-  'Die Hard': 'DieHard'
+  'Love Actually': 'LoveActually',
+  'Last Holiday': 'LastHoliday'
 };
 
 /**
@@ -54,7 +55,7 @@ function doPost(e) {
         'Movie',
         'Show Date',
         'Name',
-        'Email',
+        'Facebook/Instagram',
         'Phone',
         'Ticket Type',
         'Quantity',
@@ -76,7 +77,7 @@ function doPost(e) {
       data.movie,
       data.showDate,
       data.name,
-      data.email,
+      data.socialMedia,
       data.phone,
       data.ticketType,
       data.quantity,
@@ -147,10 +148,10 @@ function testBooking() {
   const testData = {
     postData: {
       contents: JSON.stringify({
-        movie: 'The Nightmare Before Christmas',
+        movie: 'Die Hard',
         showDate: '08.12.2025',
         name: 'Nguyen Van A',
-        email: 'test@example.com',
+        socialMedia: '@nguyenvana',
         phone: '0912345678',
         ticketType: 'A',
         quantity: 2,

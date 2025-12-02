@@ -31,9 +31,9 @@ export interface Movie {
 const movies: Movie[] = [
   {
     id: 1,
-    title: 'The Nightmare Before Christmas',
-    image: nightmareBeforeChristmas,
-    description: 'Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.',
+    title: 'Die Hard',
+    image: dieHard,
+    description: 'Thông tin buổi chiếu\n\nMột sĩ quan cảnh sát New York cố gắng cứu vợ cũ và nhiều người khác bị bắt làm con tin bởi khủng bố trong một bữa tiệc Giáng sinh.\n\nThời gian: 7h30 tối ngày 08.12.2025\nĐồ ăn: Burger của Aerie\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
@@ -44,13 +44,47 @@ const movies: Movie[] = [
       accountNumber: '1234567890',
       accountName: 'CAFE TEN QUAN'
     },
-    googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_NIGHTMARE_URL || ''
+    googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_DIE_HARD_URL || ''
   },
   {
     id: 2,
-    title: 'LAST HOLIDAY (2006)',
+    title: 'The Nightmare Before Christmas',
+    image: nightmareBeforeChristmas,
+    description: 'Thông tin buổi chiếu\n\nJack Skellington, vua của Halloween Town, khám phá ra Christmas Town, nhưng nỗ lực mang Giáng sinh về nhà gây ra nhiều nhầm lẫn.\n\nThời gian: 7h30 tối ngày 15.12.2025\nĐồ ăn: Khoai nghiền và thịt hầm\nĐồ uống: Đặt trước theo menu có sẵn',
+    ticketTypes: [
+      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
+      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+    ],
+    showDate: '15.12.2025',
+    bankInfo: {
+      bankName: 'Vietcombank',
+      accountNumber: '1234567890',
+      accountName: 'CAFE TEN QUAN'
+    },
+    googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_NIGHTMARE_URL || ''
+  },
+  {
+    id: 3,
+    title: 'Love Actually',
+    image: '',
+    description: 'Thông tin buổi chiếu\n\nCâu chuyện tình yêu đan xen của nhiều cặp đôi trong mùa Giáng sinh tại London.\n\nThời gian: 7h30 tối ngày 22.12.2025\nĐồ ăn: Mỳ ý bò bằm sốt kem\nĐồ uống: Đặt trước theo menu có sẵn',
+    ticketTypes: [
+      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
+      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
+    ],
+    showDate: '22.12.2025',
+    bankInfo: {
+      bankName: 'Vietcombank',
+      accountNumber: '1234567890',
+      accountName: 'CAFE TEN QUAN'
+    },
+    googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_LOVE_ACTUALLY_URL || ''
+  },
+  {
+    id: 4,
+    title: 'Last Holiday',
     image: lastHoliday,
-    description: 'Thông tin buổi chiếu\n\nMột người phụ nữ nghĩ mình sắp chết nên bỏ việc, tiêu hết tiền để tận hưởng cuộc sống xa hoa ở châu Âu.\n\nThời gian: 7h30 tối ngày 29.12.2025\nĐồ ăn: Cơm gà cà ri cay\nĐồ uống: Đặt trước theo menu có sẵn',
+    description: 'Thông tin buổi chiếu\n\nMột người phụ nữ nghĩ mình sắp chết nên bỏ việc, tiêu hết tiền để tận hưởng cuộc sống xa hoa ở châu Âu.\n\nThời gian: 7h30 tối ngày 29.12.2025\nĐồ ăn: Cơm cà ri gà cay\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
       { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
@@ -62,37 +96,6 @@ const movies: Movie[] = [
       accountName: 'CAFE TEN QUAN'
     },
     googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_LAST_HOLIDAY_URL || ''
-  },
-  {
-    id: 3,
-    title: 'Die Hard',
-    image: dieHard,
-    description: 'A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party.',
-    ticketTypes: [
-      { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
-      { type: 'B', price: 100000, maxSeats: 6, availableSeats: 6, description: 'Ghế thường' }
-    ],
-    showDate: '15.12.2025',
-    bankInfo: {
-      bankName: 'Vietcombank',
-      accountNumber: '1234567890',
-      accountName: 'CAFE TEN QUAN'
-    },
-    googleSheetUrl: import.meta.env.VITE_GOOGLE_SHEETS_DIE_HARD_URL || ''
-  },
-  {
-    id: 4,
-    title: 'Coming Soon',
-    image: '',
-    description: 'More exciting Christmas movies coming soon!',
-    ticketTypes: [],
-    showDate: '',
-    bankInfo: {
-      bankName: '',
-      accountNumber: '',
-      accountName: ''
-    },
-    googleSheetUrl: ''
   }
 ]
 
