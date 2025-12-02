@@ -74,7 +74,7 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
         onClick={onClose}
       >
         <div
-          className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
+          className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto p-8 relative"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
