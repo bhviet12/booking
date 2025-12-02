@@ -27,18 +27,20 @@ git push origin main
 
 ### 2.3. Thêm Environment Variables
 
-Trong phần **Environment Variables**, thêm:
+Trong phần **Environment Variables**, thêm 3 biến sau (cả 3 dùng chùng 1 URL):
 
 ```
 Name: VITE_GOOGLE_SHEETS_NIGHTMARE_URL
-Value: https://script.google.com/macros/s/xxx1/exec
+Value: https://script.google.com/macros/s/AKfycbxqGydi3QE6s8k5nX8vx7hIzWcvO0ztPfsFPQdWIfk9wVrjqFe91rBf1hT3T30TXaBRIQ/exec
 
 Name: VITE_GOOGLE_SHEETS_LAST_HOLIDAY_URL
-Value: https://script.google.com/macros/s/xxx2/exec
+Value: https://script.google.com/macros/s/AKfycbxqGydi3QE6s8k5nX8vx7hIzWcvO0ztPfsFPQdWIfk9wVrjqFe91rBf1hT3T30TXaBRIQ/exec
 
 Name: VITE_GOOGLE_SHEETS_DIE_HARD_URL
-Value: https://script.google.com/macros/s/xxx3/exec
+Value: https://script.google.com/macros/s/AKfycbxqGydi3QE6s8k5nX8vx7hIzWcvO0ztPfsFPQdWIfk9wVrjqFe91rBf1hT3T30TXaBRIQ/exec
 ```
+
+**LƯU Ý**: Cả 3 phim dùng chung 1 URL vì cùng 1 Google Spreadsheet. Script sẽ tự động phân loại vào đúng tab.
 
 6. Click **Deploy**
 
