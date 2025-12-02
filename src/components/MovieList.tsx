@@ -4,6 +4,7 @@ import MovieDetail from './MovieDetail'
 import nightmareBeforeChristmas from '../assets/the nightmare before christmas.jpg'
 import lastHoliday from '../assets/last holiday.avif'
 import dieHard from '../assets/die hard.jpg'
+import loveActually from '../assets/Poster_phim_Yêu_thực_sự_2003.jpg'
 
 export interface TicketType {
   type: 'A' | 'B'
@@ -66,7 +67,7 @@ const movies: Movie[] = [
   {
     id: 3,
     title: 'Love Actually',
-    image: '',
+    image: loveActually,
     description: 'Thông tin buổi chiếu\n\nCâu chuyện tình yêu đan xen của nhiều cặp đôi trong mùa Giáng sinh tại London.\n\nThời gian: 7h30 tối ngày 22.12.2025\nĐồ ăn: Mỳ ý bò bằm sốt kem\nĐồ uống: Đặt trước theo menu có sẵn',
     ticketTypes: [
       { type: 'A', price: 150000, maxSeats: 5, availableSeats: 5, description: 'Ghế VIP - Hàng đầu' },
