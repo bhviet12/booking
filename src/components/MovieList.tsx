@@ -117,6 +117,7 @@ export default function MovieList() {
                 key={movie.id}
                 title={movie.title}
                 image={movie.image}
+                showDate={movie.showDate}
                 description={movie.description}
                 onClick={() => setSelectedMovie(movie)}
               />
