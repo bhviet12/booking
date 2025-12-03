@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Movie } from './MovieList'
 import { sendToGoogleSheets } from '../config/api'
-import menuPlaceholder from '../assets/logo không hình@4x.png'
+import menuPlaceholder from '../assets/MENU.png'
 
 interface RegistrationDialogProps {
   movie: Movie
@@ -48,11 +48,11 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
     const result = await sendToGoogleSheets(registrationData, movie.googleSheetUrl)
 
     if (result.success) {
-      alert(`Đăng ký thành công!\n\nThông tin của bạn đã được ghi nhận.\n\nVui lòng chuyển khoản: ${totalPrice.toLocaleString('vi-VN')}đ\n\n${movie.bankInfo.bankName}\nSTK: ${movie.bankInfo.accountNumber}\nChủ TK: ${movie.bankInfo.accountName}\n\nNội dung: ${formData.name} ${movie.title}`)
+      alert(`Đăng ký thành công!\n\nThông tin của bạn đã được ghi nhận.\n\nTổng tiền: ${totalPrice.toLocaleString('vi-VN')}đ`)
     } else {
       // Even if Google Sheets fails, still show success to user
       console.warn('Google Sheets error:', result.message)
-      alert(`Đăng ký thành công!\n\nVui lòng chuyển khoản: ${totalPrice.toLocaleString('vi-VN')}đ\n\n${movie.bankInfo.bankName}\nSTK: ${movie.bankInfo.accountNumber}\nChủ TK: ${movie.bankInfo.accountName}\n\nNội dung: ${formData.name} ${movie.title}`)
+      alert(`Đăng ký thành công!\n\nTổng tiền: ${totalPrice.toLocaleString('vi-VN')}đ`)
     }
 
     onClose()
@@ -217,15 +217,6 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
               </div>
             </div>
 
-            {/* Bank Info */}
-            <div className="bg-blue-50 p-4 rounded-lg text-sm">
-              <p className="font-semibold text-gray-700 mb-2">Thông tin chuyển khoản:</p>
-              <p className="text-gray-600">Ngân hàng: {movie.bankInfo.bankName}</p>
-              <p className="text-gray-600">STK: {movie.bankInfo.accountNumber}</p>
-              <p className="text-gray-600">Chủ TK: {movie.bankInfo.accountName}</p>
-              <p className="text-red-600 font-semibold mt-2">Nội dung: [Tên] {movie.title}</p>
-            </div>
-
             {/* Buttons */}
             <div className="flex gap-4 mt-6">
               <button
@@ -269,7 +260,7 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
               Menu Đồ Uống
             </h3>
 
-            {/* Menu Image - Temporary placeholder */}
+            {/* Menu Image */}
             <div className="flex items-center justify-center bg-gray-50 rounded-lg p-4">
               <img
                 src={menuPlaceholder}
@@ -277,9 +268,6 @@ export default function RegistrationDialog({ movie, onClose }: RegistrationDialo
                 className="max-w-full max-h-[60vh] h-auto rounded-lg object-contain"
               />
             </div>
-            <p className="text-center text-sm text-gray-500 mt-2">
-              (Thay ảnh menu thật vào src/assets/)
-            </p>
 
             {/* Close button at bottom */}
             <button
